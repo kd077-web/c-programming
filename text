@@ -1,0 +1,342 @@
+
+//name kiran dahal
+//faculty  bei077
+//roll no PUR077BEI017
+//assignment 3 (looping)
+
+
+
+
+
+
+
+// 1. wap to print numbers from 25 to 150.
+
+#include<stdio.h>
+int main(){
+    int i;
+    i=25;
+    while(i<=150);
+    printf("the numbers are %d /n",i);
+    scanf("%d",&i);
+    i++;
+ return 0;  
+
+}   
+
+
+
+//2. wap to calculate the sum of numbers from 1 to 100.
+
+
+#include<stdio.h>
+int main (){
+    int i,s=0;
+    
+    
+    for(i=1;i<=100;i++){
+    
+    s=s+i;}
+    printf("the sum of number is %d",s);
+    return 0;
+
+
+}
+
+// 3. wap to calculate the sum of cube of  numbers from 1 to 100.
+
+
+#include<stdio.h>
+int main(){
+    int x, sum=0;
+    printf("number\n");
+    scanf("%d",x);
+    for(x=0;x<=100;x++){
+    sum +=x*x*x;}
+    printf("the sum of numbersis %d,sum")
+    return 0;
+}
+
+
+
+// 4.wap to print odd numbers from 200 to 250.
+
+#include<stdio.h>
+int main(){
+    int n,j=0;
+    
+    for(n=201;n<=250,n+=2){
+
+      if(n%2!=0) { 
+            printf("odd numbers %d",n);
+          
+        }
+    
+    
+        
+    
+    return 0;
+}
+
+
+
+// 5.wap to read a number and check wheather it is prime or not.
+
+
+#include <stdio.h>
+int main() {
+  int n, i,s = 0;
+  printf("Enter a positive integer: ");
+  scanf("%d", &n);
+
+  for (i = 2; i <= n / 2; ++i) {
+    // condition for non-prime
+    if (n % i == 0) {
+      s = 1;
+      break;
+    }
+  }
+
+  if (n == 1) {
+    printf("1 is neither prime nor composite.");
+  } 
+  else {
+    if (s == 0)
+      printf("%d is a prime number.", n);
+    else
+      printf("%d is not a prime number.", n);
+  }
+
+  return 0;
+}
+
+//6.wap to print all the prime numbers between 2 to 500.
+
+
+#include <stdio.h> 
+int main() 
+{ 
+ int i,a,count; 
+ printf("Prime numbers between 2 and 500 are : \n"); 
+ for (i=2;i<500;i++) 
+ { 
+	 count=0; 
+		 for (a=1;a<=i;a++) 
+		 { 
+ 			if (i%a==0) 
+ 				count++; 
+ 		 } 
+	 if (count==2) 
+		 printf("%d\t",i); 
+ } 
+ return 0; 
+} 
+
+// 7. wap to display all the 3 armstrong numbers between 100 to 500.
+
+#include<stdio.h>
+void main(){
+  int  d1,d2,d3,n,sum=0;
+  int i;
+  for(i=100;i<=500;i++)
+  {
+
+    n=i;
+    d1=n%10;
+    n=n/10;
+    d2=n%10;
+    d3=n/10;
+    sum=(d1*d1*d1)+(d2*d2*d2)+(d3*d3*d3);
+    if(sum==1){
+      printf("%d\n",i);
+    }
+  }
+  getch();
+}
+
+
+// 8.wap to display fibonacci series upto n terms.
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, i, terms;
+
+    
+    printf("Enter number of terms: ");
+    scanf("%d", &terms);
+
+    
+    a = 0;
+    b = 1;
+    c = 0;
+
+    printf("Fibonacci terms: \n");
+
+    
+    for(i=1; i<=terms; i++)
+    {
+        printf("%d, ", c);
+
+        a = b;     
+        b = c;     
+        c = a + b; 
+    }
+
+    return 0;
+}
+
+// 9. wap to display multiplication table of 5 from 1 to 10.
+
+#include<stdio.h>
+int main(){
+  int dis=0,i;
+  for(i=1;i<=10;i++){
+    print("5*%d=%d\n",i,dis+=5);
+  }
+  return 0;
+} 
+
+//or for any integar multiplication
+
+
+
+int main() {
+    int n, i;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    for (i = 1; i <= 10; ++i) {
+        printf("%d * %d = %d \n", n, i, n * i);
+    }
+    return 0;
+}
+
+
+
+
+// 10. wap to display all characters and ascii values whose ascii values ranges from 1 to 255.
+
+
+#include <stdio.h>
+int main() {  
+    char c;
+    printf("Enter a character: ");
+    scanf("%c", &c);  
+    
+    for(c=1;c<=255;++c){
+    printf("ASCII value of %c = %d", c, c);}
+    
+    return 0;
+}
+
+
+//11.wap to read n different numbers and display the sum
+
+#include <stdio.h>
+void main()
+{
+   int i,n,sum=0;
+   printf("Input Value of terms : ");
+   scanf("%d",&n);
+   printf("\nThe  %d  numbers are:\n",n);
+   for(i=1;i<=n;i++)
+   {
+     printf("%d ",i);
+     sum+=i;
+   }
+   printf("\nThe Sum of  numbers upto %d terms : %d \n",n,sum);
+
+}
+
+//12. wap to read a number and calculate its factorial.
+
+
+#include <stdio.h>
+int main() {
+    int n, i;
+     fact = 1;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+
+    
+    if (n < 0)
+        printf("Error! Factorial of a negative number doesn't exist.");
+    else {
+        for (i = 1; i <= n; ++i) {
+            fact *= i;
+        }
+        printf("Factorial of %d = %llu", n, fact);
+    }
+
+    return 0;
+}
+
+// 13. two numbers are entered through the keyboard.wap to find value of one  number raised power of another.
+
+
+#include<stdio.h>
+int main(){
+  int a,b,i,ans=1;
+  print("enter the number ");
+  scanf("%d %d",&a,&b);
+  for(i=1;i<=b;i++)
+  {
+    ans=ans*a;
+  }
+  printf("%d raised to %d is %d",a,b,ans);
+  return 0;
+}
+
+
+/*  14. wap to find the sum of series .   1+2/22+3/33+4/44.....+n/nn.
+*/
+#include<stdio.h>
+#include<conio.h>
+int main(){
+
+
+
+double i, s = 0.0,intn=5;
+  for (i = 1; i <= n; i++)
+     { s = s + 1/i;
+  return s;
+}
+ 
+
+
+    
+    printf("Sum is %f", sum(n));
+    return 0;
+}
+
+
+//15. wap to read values from the user and find the sum of given numbers until the users enters 0 and also find its average.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+   
+
+
+   
+
+
+
+
